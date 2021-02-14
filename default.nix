@@ -1,4 +1,4 @@
-{ pkgs ? <nixpkgs> }:
+{ pkgs ? import <nixpkgs> {} }:
 
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "tremor";
