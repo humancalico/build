@@ -13,7 +13,7 @@ pkgs.rustPlatform.buildRustPackage rec {
 
   cargoSha256 = "sha256-rN/d6BL2d0D0ichQR6v0543Bh/Y2ktz8ExMH50M8B8c=";
 
-  nativeBuildInputs = [ pkgs.cmake pkgs.pkg-config pkgs.clang pkgs.gcc pkgs.installShellFiles ];
+  nativeBuildInputs = [ pkgs.cmake pkgs.pkg-config pkgs.installShellFiles ];
 
   buildInputs = [ pkgs.zlib pkgs.openssl pkgs.llvmPackages.libclang ];
     #++ pkgs.lib.optionals pkgs.stdenv.isDarwin [ pkgs.Security pkgs.CoreServices ];
