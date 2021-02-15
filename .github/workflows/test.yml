@@ -16,5 +16,5 @@ jobs:
       - uses: cachix/install-nix-action@v12
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-      - run: export CC=cc
+      #- run: export CC=cc
       - run: nix-build
