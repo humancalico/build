@@ -20,7 +20,7 @@ pkgs.rustPlatform.buildRustPackage rec {
 
   LIBCLANG_PATH = "${pkgs.llvmPackages.libclang}/lib";
 
-  OPENSSL_STATIC = 1;
+  OPENSSL_NO_VENDOR = 1;
 
   cargoBuildFlags = [ "--all" ];
 
