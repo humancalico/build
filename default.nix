@@ -16,7 +16,7 @@ pkgs.rustPlatform.buildRustPackage rec {
   nativeBuildInputs = [ pkgs.cmake pkgs.pkg-config pkgs.installShellFiles ];
 
   buildInputs = [ pkgs.zlib pkgs.openssl pkgs.llvmPackages.libclang ]
-    ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [pkgs.gcc];
+    ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [pkgs.clang];
 
   LIBCLANG_PATH = "${pkgs.llvmPackages.libclang}/lib";
 
