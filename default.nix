@@ -20,8 +20,7 @@ pkgs.rustPlatform.buildRustPackage rec {
 
   LIBCLANG_PATH = "${pkgs.llvmPackages.libclang}/lib";
 
-  # OPENSSL_NO_VENDOR - If set, always find OpenSSL in the system, even if the vendored feature is enabled.
-  OPENSSL_NO_VENDOR = 1;
+  OPENSSL_STATIC = 1;
 
   cargoBuildFlags = [ "--all" ];
 
