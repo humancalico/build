@@ -16,3 +16,4 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
       #- run: export CC=cc
       - run: nix-build
+      - run: ./result/bin/tremor
