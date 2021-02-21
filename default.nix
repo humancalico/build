@@ -6,11 +6,7 @@ let
   cmake = pkgs.cmake;
   llvmPackages = pkgs.llvmPackages;
   openssl = pkgs.openssl;
-  zlib = pkgs.zlib;
-  gcc = pkgs.gcc;
-  clang = pkgs.clang;
   fetchFromGitHub = pkgs.fetchFromGitHub;
-  stdenv = pkgs.stdenv;
   installShellFiles = pkgs.installShellFiles;
 in
 rustPlatform.buildRustPackage rec {
@@ -28,7 +24,7 @@ rustPlatform.buildRustPackage rec {
 
   nativeBuildInputs = [ cmake pkg-config installShellFiles ];
 
-  buildInputs = [ zlib openssl ];
+  buildInputs = [ openssl ];
 
   postInstall = ''
     installShellCompletion --cmd tremor \
