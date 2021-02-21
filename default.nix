@@ -7,16 +7,16 @@ let
 in
 rustPlatform.buildRustPackage rec {
   pname = "volta";
-  version = "1.0.1";
+  version = "1.0.0";
 
   src = fetchFromGitHub {
     owner = "volta-cli";
     repo = "volta";
     rev = "v${version}";
-    sha256 = "015mm9i69ymzypf7a67nnmvr2k0s8wrywz1k1vq602x2xsbd6a2n";
+    sha256 = "sha256-6ZXS87upd8QAzaatDXQU5/akpAYIFNTNCK70dUlr31s=";
   };
 
-  cargoSha256 = "sha256-IE+0a2/aWIAXQIeJByekJaZsejw0ehfhnq85ooAlbV8=";
+  cargoSha256 = lib.fakeSha256;
 
   nativeBuildInputs = [ pkg-config ];
 
