@@ -1,17 +1,17 @@
 { pkgs ? import <nixpkgs> { } }:
 let
-  lib = pkgs.lib
-  rustPlatform = pkgs.rustPlatform
-  pkg-config = pkgs.pkg-config
-  cmake = pkgs.cmake
-  llvmPackages = pkgs.llvmPackages
-  openssl = pkgs.openssl
-  zlib = pkgs.zlib
-  gcc = pkgs.gcc
-  clang = pkgs.clang
-  fetchFromGitHub = pkgs.fetchFromGitHub
-  stdenv = pkgs.stdenv
-  installShellFiles = pkgs.installShellFiles
+  lib = pkgs.lib;
+  rustPlatform = pkgs.rustPlatform;
+  pkg-config = pkgs.pkg-config;
+  cmake = pkgs.cmake;
+  llvmPackages = pkgs.llvmPackages;
+  openssl = pkgs.openssl;
+  zlib = pkgs.zlib;
+  gcc = pkgs.gcc;
+  clang = pkgs.clang;
+  fetchFromGitHub = pkgs.fetchFromGitHub;
+  stdenv = pkgs.stdenv;
+  installShellFiles = pkgs.installShellFiles;
 in
 rustPlatform.buildRustPackage rec {
   pname = "tremor";
