@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { }; }:
+{ pkgs ? import <nixpkgs> { } }:
 let
   lib = pkgs.lib
   rustPlatform = pkgs.rustPlatform
